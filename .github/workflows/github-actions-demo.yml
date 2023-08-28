@@ -18,5 +18,5 @@ jobs:
           use-public-rspm: true
       - name: Use GitHub secret within R command
         run: |
-          R -e 'print("hello")'
+          R -e 'print("${{ secrets.HELLO  }}")'
       - run: echo "🍏 This job's status is ${{ job.status }}."
