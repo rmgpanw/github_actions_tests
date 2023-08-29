@@ -18,8 +18,8 @@ jobs:
           use-public-rspm: true
       - name: Use GitHub secret within R command
         env:
-          HELLO: ${{ secrets.HELLO }}
+          PRINT_ME: ${{ secrets.HELLO }}
         run: |
-          print(Sys.getenv("HELLO"))
+          print(Sys.getenv("PRINT_ME"))
         shell: Rscript {0}
       - run: echo "🍏 This job's status is ${{ job.status }}."
