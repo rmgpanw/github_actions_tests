@@ -20,6 +20,7 @@ jobs:
         env:
           PRINT_ME: ${{ secrets.HELLO }}
         run: |
-          print(Sys.getenv("PRINT_ME"))
+          x <- Sys.getenv("PRINT_ME")
+          print(x)
         shell: Rscript {0}
       - run: echo "🍏 This job's status is ${{ job.status }}."
